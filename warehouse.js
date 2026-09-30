@@ -1,5 +1,5 @@
 (function() {
-    const BASE_URL = "http://wh33171.web3.maze-tech.ru/";
+    const BASE_URL = "https://raw.githubusercontent.com/holerykk/warehouse/main/";
     const KEY_CODE_ESC = 27;
 
     const defaultTexts = {
@@ -82,7 +82,8 @@
             card.innerHTML = `
                 <div class="wh-item-title">${safeDecode(item.name)}</div>
                 <div class="wh-item-image-box">
-                    <img src="${BASE_URL}images/sklad/${item.iconId}.png" onerror="this.src='${BASE_URL}images/sklad/default.png'">
+                    <img src="${BASE_URL}${item.iconId}.png" 
+						onerror="this.src='${BASE_URL}default.png'">
                 </div>
                 <div class="wh-item-stats">
                     <div class="wh-stat"><span class="wh-stat-label">${defaultTexts.materials}</span><span class="wh-stat-value">${item.cost}</span></div>
